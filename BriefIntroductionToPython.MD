@@ -52,12 +52,13 @@ myList = []
 def addToList(item):
 	item = str(item)
 	myList.append(item)
+	print(myList)
 
 addToList('John')
 addToList(1)
 ```
 
-The script starts with an empty list. It then defines a function called `addToList()`. Finally, it "calls" the function, first using the name John and then again using the number 1. Since these belong to different data types, we might want to ensure that every item in our list is a string. So within the function, we call use the `str()` function to cast the item submitted as the function's argument to a string. Then we use the `append()` function to add it to the list.
+The script starts with an empty list. It then defines a function called `addToList()`. Finally, it "calls" the function, first using the name John and then again using the number 1. Since these belong to different data types, we might want to ensure that every item in our list is a string. So within the function, we call use the `str()` function to cast the item submitted as the function's argument to a string. Then we use the `append()` function to add it to the list. Finally, we print the result.
 
 We don't *have to* define a function for this; we could just repeat our string conversion and list appending code for each item, but calling them in a function avoids repeating code and keeps our code organised.
 
@@ -69,6 +70,7 @@ def convertNumber(item):
 	return item
 
 myNumericString = convertNumber(1)
+print(myNumericString)
 ```
 This wins the award for the most pointless function ever. You can achieve the same result with `myNumericString = str(1)`. But the `convertNumber()` function does illustrate an important point. The result of a function can be "returned" to the main code block with the `return` command, and this can be assigned to a new variable.
 
